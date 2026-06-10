@@ -7,29 +7,51 @@ function App() {
     role: 'Especialista en Ciberseguridad',
     email: 'esinche@edward-solutions.net',
     socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/tu-perfil',
-      github: 'https://github.com/tu-usuario',
-      portfolio: 'https://tuportafolio.com'
+      linkedin: 'https://ec.linkedin.com/pub/edward-gastón-sinche-cruz/',
+      github: 'https://github.com/edgasinc2019'
     }
   }
+  const certifications = [
+    { name: 'Cisco', image: '/imagenes/cisco.png' },
+    { name: 'F5', image: '/imagenes/f5.png' },
+    { name: 'Palo Alto', image: '/imagenes/palo-alto.png' },
+    { name: 'Fortinet', image: '/imagenes/fortinet.png' },
+    { name: 'Cloudflare', image: '/imagenes/cloudflare.png' }
+  ]
+  const professionalProfile = [
+    'Soy un dedicado profesional autodidacta, que logra cumplir los objetivos propuestos en los tiempos planificados en cada proyecto asignado.',
+    'Todos los clientes que administro a nivel de soporte siempre quedan satisfechos, porque logro diagnosticar y resolver los problemas de inmediato, además del desarrollo de implementación de pruebas de conceptos de pre venta.',
+    'Especialista en telecomunicaciones con más de 15 años de experiencia en tecnología Cisco, F5 Network, Imperva, CheckPoint, Sophos, Palo Alto, Fortinet, Netskope, ademas de Telefonía IP con Asterisk y Elastic, Arquitectura de servidores Windows y Linux, como también programación en Python, Power Shell, HTTP, CSS y Java Script.'
+  ]
 
   return (
     <main className="page">
       <section className="hero">
-        <p className="tag">{profile.role}</p>
-        <p className="name">{profile.name}</p>
-        <h1>Protección integral para infraestructura crítica</h1>
-        <p className="subtitle">
-          {profile.yearsExperience}+ años de experiencia en seguridad de redes, diseño de
-          arquitecturas seguras y programación aplicada a entornos empresariales.
-        </p>
-        <div className="hero-actions">
-          <a href="#contacto" className="btn btn-primary">
-            Contactar
-          </a>
-          <a href="#experiencia" className="btn btn-secondary">
-            Ver experiencia
-          </a>
+        <div className="hero-content">
+          <div>
+            <p className="tag">{profile.role}</p>
+            <p className="name">{profile.name}</p>
+            <h1>Protección integral para infraestructura crítica</h1>
+            <p className="subtitle">
+              {profile.yearsExperience}+ años de experiencia en seguridad de redes, diseño de
+              arquitecturas seguras y programación aplicada a entornos empresariales.
+            </p>
+            <div className="hero-actions">
+              <a href="#contacto" className="btn btn-primary">
+                Contactar
+              </a>
+              <a href="#experiencia" className="btn btn-secondary">
+                Ver experiencia
+              </a>
+            </div>
+          </div>
+          <div className="hero-photo-wrap">
+            <img
+              src="/imagenes/edward.png"
+              alt="Edward Gaston Sinche Cruz"
+              className="hero-photo"
+            />
+          </div>
         </div>
       </section>
 
@@ -46,11 +68,13 @@ function App() {
 
         <article className="card">
           <h2>Certificaciones y plataformas</h2>
-          <div className="badges">
-            <span>F5</span>
-            <span>Palo Alto</span>
-            <span>Fortinet</span>
-            <span>Cisco</span>
+          <div className="cert-grid">
+            {certifications.map((cert) => (
+              <div className="cert-item" key={cert.name}>
+                <img src={cert.image} alt={`Logo ${cert.name}`} />
+                <span>{cert.name}</span>
+              </div>
+            ))}
           </div>
         </article>
 
@@ -65,6 +89,38 @@ function App() {
             reducir riesgos operativos y elevar la resiliencia del negocio.
           </p>
         </article>
+      </section>
+      <section className="profile card">
+        <h2>Perfil profesional</h2>
+        {professionalProfile.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </section>
+
+      <section className="skills card">
+        <h2>Habilidades</h2>
+        <ul>
+          <li>Programación basica</li>
+          <li>Networking</li>
+          <li>Seguridades</li>
+          <li>Análisis en Wireshark</li>
+          <li>
+            Servidores:
+            <ul>
+              <li>Linux</li>
+              <li>Windows</li>
+            </ul>
+          </li>
+          <li>Balanceadores</li>
+          <li>
+            Protocolos:
+            <ul>
+              <li>DNS</li>
+              <li>HTTP</li>
+              <li>HTTPS</li>
+            </ul>
+          </li>
+        </ul>
       </section>
       <section className="projects" id="proyectos">
         <h2>Proyectos destacados</h2>
@@ -101,9 +157,6 @@ function App() {
           </a>
           <a href={profile.socialLinks.github} target="_blank" rel="noreferrer" className="btn btn-secondary">
             GitHub
-          </a>
-          <a href={profile.socialLinks.portfolio} target="_blank" rel="noreferrer" className="btn btn-secondary">
-            Portafolio
           </a>
         </div>
       </section>
