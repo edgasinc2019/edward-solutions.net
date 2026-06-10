@@ -7,7 +7,7 @@ function App() {
     role: 'Especialista en Ciberseguridad',
     email: 'esinche@edward-solutions.net',
     socialLinks: {
-      linkedin: 'https://ec.linkedin.com/pub/edward-gastón-sinche-cruz/',
+      linkedin: 'https://www.linkedin.com/in/edward-gaston-sinche-cruz/',
       github: 'https://github.com/edgasinc2019'
     }
   }
