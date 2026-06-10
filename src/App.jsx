@@ -14,7 +14,7 @@ function App() {
   const certifications = [
     { name: 'Cisco', image: '/imagenes/cisco.png' },
     { name: 'F5', image: '/imagenes/f5.png' },
-    { name: 'Palo Alto', image: '/imagenes/palo-alto.png' },
+    { name: 'Palo Alto', image: '/imagenes/paloalto.png' },
     { name: 'Fortinet', image: '/imagenes/fortinet.png' },
     { name: 'Cloudflare', image: '/imagenes/cloudflare.png' }
   ]
@@ -47,7 +47,7 @@ function App() {
           </div>
           <div className="hero-photo-wrap">
             <img
-              src="/imagenes/edward.png"
+              src="/imagenes/edward.PNG"
               alt="Edward Gaston Sinche Cruz"
               className="hero-photo"
             />
