@@ -1,0 +1,27 @@
+.visit-counter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+}
+
+.visit-counter-icon {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.visit-counter-label {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.visit-counter-value {
+  color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: 0.95rem;
+}

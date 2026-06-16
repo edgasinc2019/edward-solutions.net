@@ -4,3 +4,7 @@ compatibility_date = "2024-01-01"
 [build]
 command = "npm run build"
 directory = "dist"
+
+[[kv_namespaces]]
+binding = "VISITS_KV"
+id = "YOUR_KV_NAMESPACE_ID"

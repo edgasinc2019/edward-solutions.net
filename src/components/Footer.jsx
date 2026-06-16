@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiLinkedin, FiMail, FiHeart, FiShield } from 'react-icons/fi';
+import VisitCounter from './VisitCounter';
 import './Footer.css';
 
 const Footer = () => {
@@ -57,6 +58,8 @@ const Footer = () => {
             <FiMail size={20} />
           </motion.a>
         </motion.div>
+
+        <VisitCounter />
 
         <motion.div
           className="footer-bottom"
